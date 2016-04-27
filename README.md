@@ -10,4 +10,5 @@ Works together with the "Tango Honeyport Intelligence" Splunk app. Cowrie json l
 Updates UMASK of cowrie startup script to make the log files readable for splunk.
 
 Input needs to be created in the Universal forwarder on the MHN server
-/opt/splunkforwarder/etc/system/local/inputs.conf -> [splunktcp://:9997]
+add: [splunktcp://:9997]
+to: /opt/splunkforwarder/etc/system/local/inputs.conf 
