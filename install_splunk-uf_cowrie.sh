@@ -242,8 +242,8 @@ error_check 'Tango_input installation'
 
 # Change UMASK off cowrie startup script for cowrie logs to be splunk  readable
 cp start.sh start.sh.backup
-
 sed -i 's/--umask 0077/--umask 0022/g' start.sh
+supervisorctl restart cowrie
 
 print_notification "If the location of your cowrie log files changes or the hostname/ip of the indexer changes, you will need to modify /opt/splunkfowarder/etc/apps/tango_input/default/inputs.conf and outputs.conf respectively."
 
