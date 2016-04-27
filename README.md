@@ -16,6 +16,7 @@ git clone https://github.com/KrisBogaerts/install_splunk-uforwarder_cowrie.git /
 chmod +x /tmp/uf/install_splunk-uf_cowrie.sh
 cd /tmp/uf/
 ./install_splunk-uf_cowrie.sh
+rm -r /tmp/uf
 
 
 Input needs to be created in the Universal forwarder on the MHN server
