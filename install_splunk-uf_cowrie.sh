@@ -6,7 +6,7 @@
 
 #Script modified to be compatible with Modern Honey Network
 #In my setup the Universal forwarder forwards to the Universal forwarder on the MHN server. This UF will forward all to Splunk with "index honeypot"
-#Works together with the Tango Splunk app, cowrie json logging includes session id which is very useful for analysis.
+#Works together with the Tango Splunk app, cowrie json logging includes session id which is very useful for analysis and building dashboards.
 
 #Disclaimer. Continues for yes, quits for no.
 while true; do
