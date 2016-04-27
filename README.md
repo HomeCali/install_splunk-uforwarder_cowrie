@@ -1,0 +1,13 @@
+Splunk Universal Forwarder Install
+
+Should be compatible with Ubuntu and Debian. Tested with Ubuntu 14.01
+All credits to https://github.com/aplura/Tango 
+
+Script modified to be compatible with Modern Honey Network
+In my setup the Universal forwarder forwards to the Universal forwarder on the MHN server. This UF will forward all to Splunk with index "honeypot"
+Works together with the "Tango Honeyport Intelligence" Splunk app. Cowrie json logging includes session id which is very useful for analysis and building dashboards.
+
+Updates UMASK of cowrie startup script to make the log files readable for splunk.
+
+Input needs to be created in the Universal forwarder on the MHN server
+/opt/splunkforwarder/etc/system/local/inputs.conf -> [splunktcp://:9997]
