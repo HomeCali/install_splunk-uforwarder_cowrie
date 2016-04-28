@@ -155,7 +155,7 @@ if [ -f /etc/debian_version ]; then
     curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py" &>> $logfile
     python get-pip.py &>> $logfile	
     error_check 'Apt Package Installation'
-    iptables -t nat -A PREROUTING -p tcp --dport 22 -j REDIRECT --to-port 2222	
+    #iptables -t nat -A PREROUTING -p tcp --dport 22 -j REDIRECT --to-port 2222	
     print_notification "Installing required python packages via pip.."
     pip install pycurl service_identity ipwhois &>> $logfile
     error_check 'Python pip'
