@@ -241,8 +241,8 @@ chown -R splunk:splunk /opt/splunkforwarder &>> $logfile
 error_check 'Tango_input installation'
 
 # Change UMASK off cowrie startup script for cowrie logs to be splunk  readable after log daily log rotation
-cp start.sh start.sh.backup
-sed -i 's/--umask 0077/--umask 0022/g' start.sh
+cp /opt/cowrie/start.sh /opt/cowrie/start.sh.backup
+sed -i 's/--umask 0077/--umask 0022/g' /opt/cowrie/start.sh
 chmod 644 $KIPPO_LOG_LOCATION/cowrie.json
 supervisorctl restart cowrie
 
